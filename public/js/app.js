@@ -53,3 +53,4 @@ function send() {
 	});
 	document.getElementById('sendmessage').value = '';
 }
+
