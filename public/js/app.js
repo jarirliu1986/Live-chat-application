@@ -53,6 +53,8 @@ function showUsers() {
 		});
 }
 
+
+//this function is not used. 
 function send() {
 	socket.emit('message', {
 		name: name,
