@@ -31,17 +31,23 @@ socket.on('message', function (message) {
 //handle the message submitted
 
 var $form = $('#message-form');
-console.log($form);
+//console.log($form);
 
 $form.on('submit', function (event) {
 	event.preventDefault();
 
 	var $message = $form.find('input[name=message]');
+	//console.log(typeof $message.val());
+	var textString = $message.val().trim();
 
-	socket.emit('message', {
-		name: name,
-		text: $message.val()
-	});
+	if(textString !== ''){
+		socket.emit('message', {
+			name: name,
+			text: textString
+			//text: $message.val()
+		});
+	}
+
 
 	$message.val('');
 });
