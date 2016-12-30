@@ -46,6 +46,13 @@ $form.on('submit', function (event) {
 	$message.val('');
 });
 
+function showUsers() {
+	socket.emit('message', {
+			name: name,
+			text: '@currentUsers'
+		});
+}
+
 function send() {
 	socket.emit('message', {
 		name: name,

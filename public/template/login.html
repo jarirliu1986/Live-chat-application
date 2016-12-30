@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chat Room</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/styles.css" >
+	<script type="text/javascript">
+		function validateForm() {
+		    var x = document.forms["chatForm"]["name"].value;
+		    if (x == "") {
+		        alert("Name must be filled out");
+		        return false;
+		    }
+		}
+	</script>
+</head>
+<body>
+	
+	<div class="container" id="vertical-center">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-4 well">
+				<h1 class="text-center">Join Chat</h1>
+				<form action="/template/chat.html" class="chat-form" name="chatForm" onsubmit="return validateForm()">
+					<div class="form-group">
+						<label>Display Name</label>
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-user"></i>
+							</span>
+							<input type="text" name="name" class="form-control" placeholder="Name shown in the room" />
+						</div>
+				 	</div>
+
+					<div class="form-group">
+						<label>Room Name</label>
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-comment"></i>
+							</span>
+							<input type="text" name="room" class="form-control" placeholder="Room you want to enter">
+							
+						</div>						
+					</div>
+
+					<div class="form-group">
+						<input type="submit" value="Join Chat" class="btn btn-primary btn-block" />
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+      <div class="container">
+        <p class="text-muted" align="center">Designed and developed by Zheyu Liu 2016</p>
+        <p class="text-muted" align="center">
+        	<a href="https://github.com/jarirliu1986/Live-chat-application" target="_top"><img src="../icons/github-sign.png"></a>&nbsp;&nbsp;&nbsp;
+			<a href="https://www.linkedin.com/in/zheyu-liu-7917b1b3" target="_top"><img src="../icons/linkedin-logo.png"></a>&nbsp;&nbsp;
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
